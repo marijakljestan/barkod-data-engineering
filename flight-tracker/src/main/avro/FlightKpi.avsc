@@ -1,51 +1,69 @@
+
 {
-  "namespace": "radar",
-  "type": "record",
-  "name": "FlightKpi",
-  "fields": [
-    {
-      "name": "airport",
-      "type": "string"
-    },
-    {
-      "name": "city",
-      "type": "string"
-    },
-    {
-      "name": "country",
-      "type": "string"
-    },
-    {
-      "name": "code",
-      "type": "string"
-    },
-    {
-      "name": "latitude",
-      "type": ["null", "double"]
-    },
-    {
-      "name": "longitude",
-      "type": ["null", "double"]
-    },
-    {
-      "name": "tz",
-      "type": ["null", "string"]
-    },
-    {
-      "name": "departuresLast5Minutes",
-      "type": ["null", "long"]
-    },
-    {
-      "name": "canceledFlightsLast5Minutes",
-      "type": ["null", "long"]
-    },
-    {
-      "name": "minFlightDuration",
-      "type": ["null", "long"]
-    },
-    {
-      "name": "lastDepartureTimestamp",
-      "type": ["null", "long"]
-    }
-  ]
+    "namespace": "radar",
+    "type": "record",
+    "name": "AirportOutput",
+    "fields": [
+        {
+            "name": "to",
+            "type": "string"
+        },
+        {
+            "name": "from",
+            "type": "string"
+        },
+        {
+            "name": "departureTimestamp",
+            "type": "long"
+        },
+        {
+            "name": "arrivalTimestamp",
+            "type": "long"
+        },
+        {
+            "name": "duration",
+            "type": "long"
+        },
+        {
+            "name": "departureDatetime",
+            "type": "string"
+        },
+        {
+            "name": "arrivalDatetime",
+            "type": "string"
+        },
+        {
+            "name": "departureAirportCode",
+            "type": "string"  
+        },
+        {
+            "name": "arrivalAirportCode",
+            "type": "string"
+        },
+        {
+            "name": "status",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name": "gate",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name": "airline",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name": "id",
+            "type": ["null", "string"],
+            "default": null
+        },
+        {
+            "name": "date",
+            "type": ["null", "string"],
+            "default": null
+        }
+    ]
 }
